@@ -9,6 +9,17 @@ body{
 }
 .item{
   display:grid;
-  align-itemsflex-start;
-  justify-content
+  align-items:flex-start;
+  justify-content:center;
+  flex:1;
+  padding:.5rem;
+  margin:.3rem,2rem;
+  font-size:20px
+  font-family:sans-serif;
+  color:BA1801;
+  text-decoration:none;
+  background:F7A300;
+  transition:.3s;
+}
+  
   
