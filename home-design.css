@@ -19,6 +19,8 @@ h1{
   align-items:flex-start;
   justify-content:center;
   
+}
+  
 .choise-btn{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
