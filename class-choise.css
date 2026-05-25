@@ -6,7 +6,7 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  align-content:space-between;
+  align-content:center;
   
 }
 .item{
