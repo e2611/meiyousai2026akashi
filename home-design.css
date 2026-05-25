@@ -23,5 +23,8 @@ body{
   background:blue;
   transition:.3s;
 }
+.item:hover{
+  background:#fff;
+  color:blue;
   
   
