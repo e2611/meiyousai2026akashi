@@ -9,6 +9,7 @@ body{
   
 }
 .item{
+  display:flex;
   display:inline-box;
   align-items:flex-start;
   justify-content:center;
