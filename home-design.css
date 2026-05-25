@@ -8,6 +8,12 @@ h1{
   font-size:40px;
   font-family:sans-serif;
 }
+.department{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap 10px;
+  align-content:space-between;
+}
 .choise-btn{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
