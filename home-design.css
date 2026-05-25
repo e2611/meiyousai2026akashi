@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body{
-  background-color:#FFEDB3;
+  background-color:#e6f0f0;
 }
 h1{
   background-color:#FEDCBD;
@@ -25,13 +25,13 @@ h1{
   margin:.3rem,2rem;
   font-size:20px;
   font-family:sans-serif;
-  color:#fff;
+  color:#ffffff;
   text-decoration:none;
-  background:blue;
+  background:#97cdf3;
   transition:.3s;
 }
 .item:hover{
-  background:#fff;
-  color:blue;
+  background:#ffffff;
+  color:#97cdf3;
   scale:1.2;
 }
