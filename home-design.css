@@ -2,6 +2,12 @@
 body{
   background-color:#FFEDB3;
 }
+h1{
+  background-color:#FEDCBD;
+  color:#fff;
+  font-size:40px;
+  font-family:sans-serif;
+}
 .choise-btn{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
