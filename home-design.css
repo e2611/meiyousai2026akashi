@@ -6,6 +6,7 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
   gap:10px;
+  
 }
 .item{
   display:grid;
@@ -18,7 +19,7 @@ body{
   font-family:sans-serif;
   color:BA1801;
   text-decoration:none;
-  background:F7A300;
+  background-color:F7A300;
   transition:.3s;
 }
   
