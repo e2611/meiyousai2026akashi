@@ -26,5 +26,4 @@ body{
 .item:hover{
   background:#fff;
   color:blue;
-  
-  
+  scale:1.2;
