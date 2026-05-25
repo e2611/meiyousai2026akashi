@@ -18,9 +18,9 @@ body{
   margin:.3rem,2rem;
   font-size:20px;
   font-family:sans-serif;
-  color:BA1801;
+  color:#fff;
   text-decoration:none;
-  background-color:#F7A300;
+  background:blue;
   transition:.3s;
 }
   
