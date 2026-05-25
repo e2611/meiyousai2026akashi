@@ -9,7 +9,7 @@ body{
   
 }
 .item{
-  display:grid;
+  display:inline-box;
   align-items:flex-start;
   justify-content:center;
   flex:1;
@@ -19,7 +19,7 @@ body{
   font-family:sans-serif;
   color:BA1801;
   text-decoration:none;
-  background:F7A300;
+  background-color:#F7A300;
   transition:.3s;
 }
   
