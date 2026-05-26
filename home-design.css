@@ -47,7 +47,7 @@ h1{
 }
 .choise-btn2{
   display:grid;
-  grid-template-columns:1fr 0.5fr 0.5fr 1fr 1fr;
+  grid-template-columns:1fr 0.486fr 0.486fr 1fr 1fr;
   gap:10px;
   align-content:space-between;
 }
