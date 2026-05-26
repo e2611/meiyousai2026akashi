@@ -46,7 +46,7 @@ h1{
   color:#97cdf3;
 }
 .choise-btn2{
-  margin:10px;
+  margin:10px 0px 0px 0px;
   display:grid;
   grid-template-columns:1fr 0.486fr 0.486fr 1fr 1fr;
   gap:10px;
