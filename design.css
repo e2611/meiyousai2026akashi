@@ -29,7 +29,12 @@ body{
   justify-content:center;
   text-align:center;
   flex:1;
-  font-size:20px;
   font-family:sans-serif;
   color:#121212;
+}
+.font-big{
+  font-size:20px;
+}
+.font-small{
+  font-size:15px
 }
