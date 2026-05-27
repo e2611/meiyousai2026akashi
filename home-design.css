@@ -30,7 +30,7 @@ h1{
 }
 .item{
   display:flex;
-  display:inline-box;
+  display:inline-block;
   align-items:flex-start;
   justify-content:center;
   flex:1;
