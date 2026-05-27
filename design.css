@@ -16,3 +16,14 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
 }
+.timetable-item{
+  display:flex;
+  display:flex;
+  display:inline-box;
+  align-items:flex-start;
+  justify-content:center;
+  flex:1;
+  font-size:20px;
+  font-family:sans-serif;
+  color:#ffffff;
+}
