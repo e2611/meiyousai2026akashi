@@ -3,8 +3,9 @@ body{
   background-color:#e6f0f0;
 }
 h1{
-  background-color:#2291f2;
+  background:#2291f2;
   color:white;
   font-size:40px;
   font-family:sans-serif;
+  display:inline-block;
 }
