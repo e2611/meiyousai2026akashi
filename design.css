@@ -24,7 +24,7 @@ body{
 .timetable-item{
   display:flex;
   display:flex;
-  display:inline-box;
+  display:inline-block;
   align-items:flex-start;
   justify-content:center;
   flex:1;
