@@ -12,3 +12,7 @@ body{
 .Adepbackcolor{
   background:#B7D100;
 }
+.timetable-design{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+}
