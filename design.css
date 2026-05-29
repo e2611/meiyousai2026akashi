@@ -3,12 +3,13 @@ body{
   background-color:#e6f0f0;
 }
 .backtohome{
-  font-size:10px;
+  font-size:25px;
   color:white;
   display:inline-block;
   font-family:sans-serif;
-  text-align:left;
+  text-align:right;
   background-color:#2291f2;
+  text-decoration:none;
 }
 .whatmonth{
   font-size:20px;
