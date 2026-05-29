@@ -10,6 +10,7 @@ body{
   float:right;
   background-color:#97cdf3;
   text-decoration:none;
+  transition:.3s;
 }
 .backtohome:hover{
   color:#97cdf3;
