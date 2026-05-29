@@ -13,16 +13,19 @@ if(youbi==1){
 }
 if(youbi==2){
   youbidevice="火曜日";
+  document.getElementById('tuesday').textContent=`${hi}(火)`;
 }
 if(youbi==3){
   youbidevice="水曜日";
+  document.getElementById('wednesday').textContent=`${hi}(水)`;
 }
 if(youbi==4){
   youbidevice="木曜日";
+  document.getElementById('thursday').textContent=`${hi}(木)`;
 }
 if(youbi==5){
   youbidevice="金曜日";
-  document.getElementById('monday').textContent=`${hi}(金)`;
+  document.getElementById('friday').textContent=`${hi}(金)`;
 }
 if(youbi==6){
   youbidevice="土曜日";
