@@ -28,3 +28,4 @@ if(youbi==6){
 if(youbi==0){
   youbidevice="日曜日";
 }
+console.log(tukidevice+'月'+hi+'日'+youbidevice);
