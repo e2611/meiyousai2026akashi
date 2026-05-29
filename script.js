@@ -9,6 +9,7 @@ document.getElementById('month-display').textContent = `${tukidevice}月`;
 let youbidevice;
 if(youbi==1){
   youbidevice="月曜日";
+  document.getElementById('monday').textContent=`${hi}(月)`;
 }
 if(youbi==2){
   youbidevice="火曜日";
@@ -21,6 +22,7 @@ if(youbi==4){
 }
 if(youbi==5){
   youbidevice="金曜日";
+  document.getElementById('monday').textContent=`${hi}(金)`;
 }
 if(youbi==6){
   youbidevice="土曜日";
