@@ -1,6 +1,6 @@
 'use strict';
 let Presentdate=new Date()
-let tuki=Presenydate.getMonth()
+let tuki=Presentdate.getMonth()
 let hi=Presentdate.getDate()
 let youbi=Presentdate.getDay()
 tuki += 1;
