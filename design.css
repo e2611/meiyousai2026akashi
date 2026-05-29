@@ -4,11 +4,11 @@ body{
 }
 .backtohome{
   font-size:25px;
-  color:white;
+  color:#ffffff;
   display:inline-block;
   font-family:sans-serif;
   float:right;
-  background-color:#2291f2;
+  background-color:#97cdf3;
   text-decoration:none;
 }
 .whatmonth{
