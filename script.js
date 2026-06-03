@@ -136,5 +136,10 @@ if(youbi==0){
 //曜日調整終わり
 
 //授業表示
-document.getElementsByClassName('zoukei')[0].textContent=`造形でーす`;
+document.getElementsByClassName('zoukei')[0].textContent=`造形`;
+document.getElementsByClassName('bousai')[0].textContent=`防災リテラシー`;
+document.getElementsByClassName('english1a')[0].textContent=`英語ⅠA`;
+document.getElementsByClassName('math1a')[0].textContent=`数学ⅠA`;
+document.getElementsByClassName('datescience')[0].textContent=`データサイエンス入門`;
+
 
