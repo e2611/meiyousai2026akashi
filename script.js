@@ -10,7 +10,7 @@ let youbidevice;
 if(youbi==1){
   youbidevice="月曜日";
   document.getElementById('monday').textContent=`${hi}(月)`;
-  hi.setDate(hi.getDate()+1);
+  hi.setDate(Presentdate.getDate()+1);
   document.getElementById('tuesday').textContent=`${hi}(火)`;
 }
 if(youbi==2){
