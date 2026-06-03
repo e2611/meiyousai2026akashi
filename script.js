@@ -136,10 +136,6 @@ if(youbi==0){
 //曜日調整終わり
 
 //授業表示
-document.getElementsByClassName('zoukei')[0].textContent=`造形`;
-document.getElementsByClassName('bousai')[0].textContent=`防災リテラシー`;
-document.getElementsByClassName('english1a')[0].textContent=`英語ⅠA`;
-document.getElementsByClassName('math1a')[0].textContent=`数学ⅠA`;
 document.getElementsByClassName('datescience')[0].textContent=`データサイエンス入門`;
 document.getElementsByClassName('kentikusekkeiensyu1a')[0].textContent=`建築設計演習ⅠA`;
 document.getElementsByClassName('math1b')[0].textContent=`数学ⅠB`;
@@ -154,3 +150,7 @@ document.getElementsByClassName('kentikuippankouzou')[0].textContent=`建築一�
 document.getElementsByClassName('HR')[0].textContent=`HR`;
 document.getElementsByClassName('blank')[0].textContent=`空きコマ`;
 document.getElementsByClassName('history1')[0].textContent=`歴史`;
+document.getElementsByClassName('zoukei')[0].textContent=`造形`;
+document.getElementsByClassName('bousai')[0].textContent=`防災リテラシー`;
+document.getElementsByClassName('english1a')[0].textContent=`英語ⅠA`;
+document.getElementsByClassName('math1a')[0].textContent=`数学ⅠA`;
