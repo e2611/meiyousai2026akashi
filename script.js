@@ -1,4 +1,6 @@
 'use strict';
+
+//曜日決め
 let Presentdate=new Date();
 let tuki=Presentdate.getMonth();
 let hi=Presentdate.getDate();
@@ -131,4 +133,8 @@ if(youbi==0){
   hi=karidate.getDate()
   document.getElementById('friday').textContent=`${hi}(金)`;
 }
-console.log(tukidevice+'月'+hi+'日'+youbidevice);
+//曜日調整終わり
+
+//授業表示
+document.getElementByClassName("zoukei").textContent=`金`
+
