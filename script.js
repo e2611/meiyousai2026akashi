@@ -21,7 +21,8 @@ if(youbi==3){
   youbidevice="水曜日";
   document.getElementById('wednesday').textContent=`${hi}(水)`;
   Presentdate.setDate(Presentdate.getDate()+1);
-  document.getElementById('tuesday').textContent=`${Presentdate}(火)`;
+  hi=Presentdate.getDate()
+  document.getElementById('tuesday').textContent=`${Presentdate}(木)`;
 }
 if(youbi==4){
   youbidevice="木曜日";
