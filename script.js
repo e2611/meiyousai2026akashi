@@ -17,18 +17,19 @@ if(youbi==2){
 }
 if(youbi==3){
   youbidevice="水曜日";
+  let karidate=new Date();
   document.getElementById('wednesday').textContent=`${hi}(水)`;
-  Presentdate.setDate(Presentdate.getDate()+1);
-  hi=Presentdate.getDate()
+  karidate.setDate(Presentdate.getDate()+1);
+  hi=karidate.getDate()
   document.getElementById('thursday').textContent=`${hi}(木)`;
-  Presentdate.setDate(Presentdate.getDate()+2);
-  hi=Presentdate.getDate()
+  kaeidate.setDate(Presentdate.getDate()+2);
+  hi=karidate.getDate()
   document.getElementById('friday').textContent=`${hi}(金)`;
-  Presentdate.setDate(Presentdate.getDate()-1);
-  hi=Presentdate.getDate()
+  karidate.setDate(Presentdate.getDate()-1);
+  hi=karidate.getDate()
   document.getElementById('tuesday').textContent=`${hi}(火)`;
-  Presentdate.setDate(Presentdate.getDate()-2);
-  hi=Presentdate.getDate()
+  karidate.setDate(Presentdate.getDate()-2);
+  hi=karidate.getDate()
   document.getElementById('monday').textContent=`${hi}(月)`;
   
 }
