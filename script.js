@@ -10,8 +10,6 @@ let youbidevice;
 if(youbi==1){
   youbidevice="月曜日";
   document.getElementById('monday').textContent=`${hi}(月)`;
-  hi.setDate(Presentdate.getDate()+1);
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
 }
 if(youbi==2){
   youbidevice="火曜日";
@@ -22,7 +20,17 @@ if(youbi==3){
   document.getElementById('wednesday').textContent=`${hi}(水)`;
   Presentdate.setDate(Presentdate.getDate()+1);
   hi=Presentdate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(木)`;
+  document.getElementById('thursday').textContent=`${hi}(木)`;
+  Presentdate.setDate(Presentdate.getDate()+2);
+  hi=Presentdate.getDate()
+  document.getElementById('friday').textContent=`${hi}(金)`;
+  Presentdate.setDate(Presentdate.getDate()-1);
+  hi=Presentdate.getDate()
+  document.getElementById('tuesday').textContent=`${hi}(火)`;
+  Presentdate.setDate(Presentdate.getDate()=2);
+  hi=Presentdate.getDate()
+  document.getElementById('monday').textContent=`${hi}(月)`;
+  
 }
 if(youbi==4){
   youbidevice="木曜日";
