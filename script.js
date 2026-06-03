@@ -136,5 +136,5 @@ if(youbi==0){
 //曜日調整終わり
 
 //授業表示
-document.getElementByClassName("zoukei").textContent=`金`
+document.getElementByClassName('zoukei').textContent=`金`;
 
