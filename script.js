@@ -20,7 +20,7 @@ if(youbi==1){
   karidate.setDate(Presentdate.getDate()+3);
   hi=karidate.getDate()
   document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+5);
+  karidate.setDate(Presentdate.getDate()+4);
   hi=karidate.getDate()
   document.getElementById('friday').textContent=`${hi}(金)`;
 }
@@ -95,8 +95,40 @@ if(youbi==5){
 }
 if(youbi==6){
   youbidevice="土曜日";
+  let karidate=new Date();
+  karidate.setDate(Presentdate.getDate()+2);
+  hi=karidate.getDate()
+  document.getElementById('monday').textContent=`${hi}(月)`;
+  karidate.setDate(Presentdate.getDate()+3);
+  hi=karidate.getDate()
+  document.getElementById('tuesday').textContent=`${hi}(火)`;
+  karidate.setDate(Presentdate.getDate()+4);
+  hi=karidate.getDate()
+  document.getElementById('wednesday').textContent=`${hi}(水)`;
+  karidate.setDate(Presentdate.getDate()+5);
+  hi=karidate.getDate()
+  document.getElementById('thursday').textContent=`${hi}(木)`;
+  karidate.setDate(Presentdate.getDate()+6);
+  hi=karidate.getDate()
+  document.getElementById('friday').textContent=`${hi}(金)`;
 }
 if(youbi==0){
   youbidevice="日曜日";
+  let karidate=new Date();
+  karidate.setDate(Presentdate.getDate()+1);
+  hi=karidate.getDate()
+  document.getElementById('monday').textContent=`${hi}(月)`;
+  karidate.setDate(Presentdate.getDate()+2);
+  hi=karidate.getDate()
+  document.getElementById('tuesday').textContent=`${hi}(火)`;
+  karidate.setDate(Presentdate.getDate()+3);
+  hi=karidate.getDate()
+  document.getElementById('wednesday').textContent=`${hi}(水)`;
+  karidate.setDate(Presentdate.getDate()+4);
+  hi=karidate.getDate()
+  document.getElementById('thursday').textContent=`${hi}(木)`;
+  karidate.setDate(Presentdate.getDate()+5);
+  hi=karidate.getDate()
+  document.getElementById('friday').textContent=`${hi}(金)`;
 }
 console.log(tukidevice+'月'+hi+'日'+youbidevice);
