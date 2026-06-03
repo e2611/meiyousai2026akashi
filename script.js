@@ -27,7 +27,7 @@ if(youbi==3){
   Presentdate.setDate(Presentdate.getDate()-1);
   hi=Presentdate.getDate()
   document.getElementById('tuesday').textContent=`${hi}(火)`;
-  Presentdate.setDate(Presentdate.getDate()=2);
+  Presentdate.setDate(Presentdate.getDate()-2);
   hi=Presentdate.getDate()
   document.getElementById('monday').textContent=`${hi}(月)`;
   
