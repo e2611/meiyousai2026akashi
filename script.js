@@ -20,7 +20,7 @@ if(youbi==2){
 if(youbi==3){
   youbidevice="水曜日";
   document.getElementById('wednesday').textContent=`${hi}(水)`;
-  hi.setDate(hi.getDate()+1);
+  hi.setDate(Presentdate.getDate()+1);
   document.getElementById('tuesday').textContent=`${hi}(火)`;
 }
 if(youbi==4){
