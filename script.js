@@ -22,7 +22,7 @@ if(youbi==3){
   karidate.setDate(Presentdate.getDate()+1);
   hi=karidate.getDate()
   document.getElementById('thursday').textContent=`${hi}(木)`;
-  kaeidate.setDate(Presentdate.getDate()+2);
+  karidate.setDate(Presentdate.getDate()+2);
   hi=karidate.getDate()
   document.getElementById('friday').textContent=`${hi}(金)`;
   karidate.setDate(Presentdate.getDate()-1);
