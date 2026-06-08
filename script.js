@@ -135,4 +135,5 @@ if(youbi==0){
 }
 
 const jsonfile='class.json';
+console.log(class.json)
 
