@@ -136,4 +136,6 @@ if(youbi==0){
 
 const jsonfile='class.json';
 console.log(jsonfile);
+const parsed = JSON.parse(jsonfile);
+console.log(parsed.1-1A);
 
