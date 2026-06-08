@@ -133,7 +133,6 @@ if(youbi==0){
   hi=karidate.getDate()
   document.getElementById('friday').textContent=`${hi}(金)`;
 }
-
-const jsonfile='class.json';
-console.log(jsonfile);
-const jsonFile = 'class.json';
+const jsonfile=require("class.json");
+const fileName = window.location.pathname.split('/').pop();
+console.log(fileName);
