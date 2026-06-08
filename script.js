@@ -136,5 +136,4 @@ if(youbi==0){
 
 const jsonfile='class.json';
 console.log(jsonfile);
-import data from "class.json" assert { type: "json" };
-console.log(data);
+const jsonFile = 'class.json';
