@@ -135,6 +135,7 @@ if(youbi==0){
 }
 let nowfileName = window.location.pathname.split('/').pop();
 console.log(nowfileName);
-let nowclass=nowfileName.slice(0.-5);
-console.log(nowclass)
+let nowclass=nowfileName.slice(0,-5);
+console.log(nowclass);
+
 
