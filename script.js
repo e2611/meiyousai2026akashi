@@ -133,5 +133,8 @@ if(youbi==0){
   hi=karidate.getDate()
   document.getElementById('friday').textContent=`${hi}(金)`;
 }
-const fileName = window.location.pathname.split('/').pop();
-console.log(fileName);
+let nowfileName = window.location.pathname.split('/').pop();
+console.log(nowfileName);
+let nowclass=nowfileName.slice(0.-5);
+console.log(nowclass)
+
