@@ -1,4 +1,14 @@
 'use strict';
+let data;
+try {
+  const response = await fetch('data.json');
+  if (!response.ok) throw new Error('ファイルの読み込みに失敗しました');
+  
+  data = await response.json();
+  console.log(data); // 取得したデータを利用
+} catch (error) {
+  console.error(error);
+}
 
 //曜日決め
 let Presentdate=new Date();
@@ -159,5 +169,3 @@ fileInput.addEventListener('change', (event) => {
     reader.readAsText(file);
   }
 });
-
-
