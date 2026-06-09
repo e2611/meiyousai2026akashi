@@ -137,5 +137,27 @@ let nowfileName = window.location.pathname.split('/').pop();
 console.log(nowfileName);
 let nowclass=nowfileName.slice(0,-5);
 console.log(nowclass);
+const fileInput = document.getElementById('fileInput');
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  
+  if (file) {
+    const reader = new FileReader();
+    
+    // ファイルの読み込みが完了した時の処理
+    reader.onload = (e) => {
+      try {
+        const jsonData = JSON.parse(e.target.result);
+        console.log(jsonData);
+      } catch (error) {
+        console.error('JSONの解析に失敗しました', error);
+      }
+    };
+    
+    // テキストとしてファイルを読み込む
+    reader.readAsText(file);
+  }
+});
 
 
