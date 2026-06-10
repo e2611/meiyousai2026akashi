@@ -66,12 +66,12 @@ body{
   color: #4682b4;
 }
  
-.description_bottom { /* ツールチップのスタイル */
-  width: 280px; /* 横幅 */
-  height: 80px;
+.description_top { /* ツールチップのスタイル */
+  width: 200px; /* 横幅 */
   position: absolute;
-  top: 80%; /* Y軸の位置 */
   left: 50%;
+  height: 80px;
+  top: 90%; /* Y軸の位置 */
   transform: translateX(-50%);
   margin-top: 10px; /* テキストとの距離 */
   padding: 8px;
@@ -81,13 +81,13 @@ body{
   color: #121111;
   text-align: center;
   visibility: hidden; /* ツールチップを非表示に */
-  opacity: 0; 
+  opacity: 0; /* 不透明度を0％に */
   z-index: 1;
-  transition: 0.5s all; 
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
 }
  
-.tooltip:hover .description_bottom { /* マウスオーバー時のスタイル */
-  top: 100%; /* Y軸の位置 */
+.tooltip:hover .description_top { /* マウスオーバー時のスタイル */
+  bottom: 100%; /* Y軸の位置 */
   visibility: visible; /* ツールチップを表示 */
-  opacity: 1; 
-}
+  opacity: 95%; /* 不透明度を100％に */
+} 
