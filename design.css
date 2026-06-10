@@ -56,3 +56,37 @@ body{
 .font-small{
   font-size:15px
 }
+
+.tooltip { /* 補足説明するテキストのスタイル */
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 0.9em;
+  color: #4682b4;
+}
+ 
+.description_bottom { /* ツールチップのスタイル */
+  width: 280px; /* 横幅 */
+  height: 80px;
+  position: absolute;
+  top: 80%; /* Y軸の位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px; /* テキストとの距離 */
+  padding: 8px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: #e9f7e5;
+  font-size: 1rem;
+  color: #121111;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; 
+  z-index: 1;
+  transition: 0.5s all; 
+}
+ 
+.tooltip:hover .description_bottom { /* マウスオーバー時のスタイル */
+  top: 100%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; 
+}
