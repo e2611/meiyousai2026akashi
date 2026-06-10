@@ -154,27 +154,25 @@ async function init() {
     let gen;
     let youbi;
 for(let i=1; i<6; i++){
-  if(i==1){
-    youbi="月曜日"
-  }else if(i==2){
-    youbi="火曜日"
-  }else if(i==3){
-    youbi="水曜日"
-  }else if(i==4){
-    youbi="木曜日"
-  }else if(i==5){
-    youbi="金曜日"
-  }
+    switch(i){
+      case 1:
+        youbi="mon";
+        break;
+      case 2:
+        youbi="tues";
+        break;
+      case 3:
+        youbi="wednes";
+        break;
+      case 4:
+        youbi="thurs";
+        break;
+      case 5:
+        youbi="fri";
+        break;}
+    
   for(let j=1; j<5; j++){
-    if(j==1){
-      gen="1限"
-    }else if(j==2){
-      gen="2限"
-    }else if(j==3){
-      gen="3限"
-    }else if(j==4){
-      gen="4限"
-    }
+    gen=j;
     let subject=thisclassschedule[youbi][String(j)];
     document.getElementById(`${youbi}-${gen}`).textContent=subject;
   }
