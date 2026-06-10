@@ -136,13 +136,21 @@ let nowfileName = window.location.pathname.split('/').pop();
 console.log(nowfileName);
 let nowclass=nowfileName.slice(0,-5);
 console.log(nowclass);
-let data;
-try {
-  const response = await fetch('data.json');
+
+async function fetchJson(url) {
+  const response = await fetch(url);
   if (!response.ok) throw new Error('ファイルの読み込みに失敗しました');
-  
-  data = await response.json();
-  console.log(data); // 取得したデータを利用
-} catch (error) {
-  console.error(error);
+  return await response.json();
 }
+
+async function init() {
+  try {
+    const data = await fetchJson('class.json');
+    console.log(data); // 取得したデータを利用
+    console.log(data[nowclass]);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+init();
