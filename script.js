@@ -72,7 +72,7 @@ if(youbi==4){
   document.getElementById('wednesday').textContent=`${hi}(水)`;
   karidate.setDate(Presentdate.getDate()-2);
   hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
+  document.getElementById('tuesday').textContent=`${hi}(木)`;
   karidate.setDate(Presentdate.getDate()-3);
   hi=karidate.getDate()
   document.getElementById('monday').textContent=`${hi}(月)`;
@@ -147,31 +147,35 @@ async function init() {
   try {
     const data = await fetchJson('class.json');
     console.log(data); // 取得したデータを利用
-    console.log(data[nowclass]);
-    let thisclassschedule=data[nowclass];
+    const thisclassschedule = data.find(item => item.class === nowclass);
+    if (!thisclassschedule) {
+      throw new Error(`class.json に ${nowclass} のデータが見つかりません`);
+    }
+    let gen;
+    let youbi;
 for(let i=1; i<6; i++){
   if(i==1){
-    let youbi="月曜日"
+    youbi="月曜日"
   }else if(i==2){
-    let youbi="火曜日"
+    youbi="火曜日"
   }else if(i==3){
-    let youbi="水曜日"
+    youbi="水曜日"
   }else if(i==4){
-    let youbi="木曜日"
+    youbi="木曜日"
   }else if(i==5){
-    let youbi="金曜日"
+    youbi="金曜日"
   }
   for(let j=1; j<5; j++){
     if(j==1){
-      let gen="1限"
+      gen="1限"
     }else if(j==2){
-      let gen="2限"
+      gen="2限"
     }else if(j==3){
-      let gen="3限"
+      gen="3限"
     }else if(j==4){
-      let gen="4限"
+      gen="4限"
     }
-    let subject=thisclassschedule[youbi][gen]
+    let subject=thisclassschedule[youbi][String(j)];
     document.getElementById(`${youbi}-${gen}`).textContent=subject;
   }
 }
