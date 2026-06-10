@@ -148,13 +148,7 @@ async function init() {
     const data = await fetchJson('class.json');
     console.log(data); // 取得したデータを利用
     console.log(data[nowclass]);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-init();
-let thisclassschedule=data[nowclass];
+    let thisclassschedule=data[nowclass];
 for(let i=1; i<6; i++){
   if(i==1){
     let youbi="月曜日"
@@ -181,3 +175,10 @@ for(let i=1; i<6; i++){
     document.getElementById(`${youbi}-${gen}`).textContent=subject;
   }
 }
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+init();
