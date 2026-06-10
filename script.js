@@ -147,8 +147,10 @@ async function init() {
   try {
     const data = await fetchJson('class.json');
     console.log(data); // 取得したデータを利用
-    console.log(data[nowclass]);
-    let thisclassschedule=data[nowclass];
+    const thisclassschedule = data.find(item => item.class === nowclass);
+    if (!thisclassschedule) {
+      throw new Error(`class.json に ${nowclass} のデータが見つかりません`);
+    }
     let gen;
     let youbi;
 for(let i=1; i<6; i++){
@@ -173,7 +175,7 @@ for(let i=1; i<6; i++){
     }else if(j==4){
       gen="4限"
     }
-    let subject=thisclassschedule[youbi][gen]
+    let subject=thisclassschedule[youbi][String(j)];
     document.getElementById(`${youbi}-${gen}`).textContent=subject;
   }
 }
