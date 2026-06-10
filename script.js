@@ -171,10 +171,23 @@ for(let i=1; i<6; i++){
         youbi="fri";
         break;}
     
+  const dayMap = {
+    mon: '月曜日',
+    tues: '火曜日',
+    wednes: '水曜日',
+    thurs: '木曜日',
+    fri: '金曜日'
+  };
+
   for(let j=1; j<5; j++){
-    gen=j;
-    let subject=thisclassschedule[youbi][String(j)];
-    document.getElementById(`${youbi}-${gen}`).textContent=subject;
+    gen = j;
+    const dayKey = dayMap[youbi];
+    const daySchedule = thisclassschedule[dayKey] || {};
+    const subject = daySchedule[String(j)] || '';
+    const cell = document.getElementById(`${youbi}-${gen}`);
+    if (cell) {
+      cell.textContent = subject;
+    }
   }
 }
 
