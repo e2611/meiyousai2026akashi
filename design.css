@@ -15,12 +15,13 @@ right:0;
 .weekchange{
   background-color:#97cdf3;
   color:#ffffff;
-  font-size:15px;
+  font-size:20px;
   font-family:sans-serif;
   transition:.3s;
   border:none;
   margin-top: 10px;
   margin-bottom:10px;
+  width:20px
 }
 .weekchange:hover{
   color:#97cdf3;
