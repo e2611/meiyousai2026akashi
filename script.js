@@ -1,137 +1,41 @@
 'use strict';
-//曜日決め
-let Presentdate=new Date();
-let tuki=Presentdate.getMonth();
-let hi=Presentdate.getDate();
-let youbi=Presentdate.getDay();
-let tukidevice=tuki+1;
-console.log(tukidevice+'月'+hi+'日'+youbi);
-document.getElementById('month-display').textContent = `${tukidevice}月`;
-let youbidevice;
-if(youbi==1){
-  youbidevice="月曜日";
-  let karidate=new Date();
-  document.getElementById('monday').textContent=`${hi}(月)`;
-  karidate.setDate(Presentdate.getDate()+1);
-  hi=karidate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
-  karidate.setDate(Presentdate.getDate()+2);
-  hi=karidate.getDate()
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()+3);
-  hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+4);
-  hi=karidate.getDate()
-  document.getElementById('friday').textContent=`${hi}(金)`;
+let baseMonday=new Date();
+function initbaseMonday() {
+  let today=new Date();
+  let day0fweek=today.getDay();
+  let diffDays=0;
+  if(day0fweek===0){
+    diffDays=1;
+  }else if(day0fweek===6){
+    diffDays=2;
+  }else{
+    diffDays=1-day0fweek;
+  }
+  baseMonday.setDate(today.getDate()+diffDays);
+  renderWeek();
 }
-if(youbi==2){
-  youbidevice="火曜日";
-  let karidate=new Date();
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
-  karidate.setDate(Presentdate.getDate()+1);
-  hi=karidate.getDate()
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()+2);
-  hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+3);
-  hi=karidate.getDate()
-  document.getElementById('friday').textContent=`${hi}(金)`;
-  karidate.setDate(Presentdate.getDate()-1);
-  hi=karidate.getDate()
-  document.getElementById('monday').textContent=`${hi}(月)`;
+function renderWeek(){
+  let month=baseMonday.getMonth()+1;
+  document.getElementById("month-display").textContent=`${month}月`;
+  const days=['monday','tuesday','wednesday','thursday','friday'];
+  const labels=['月','火','水','木','金'];
+  for(let i=0;i<5;i++){
+    let targetDate=new Date(baseMonday);
+    targetDate.setDate(baseMonday.getDate()+i);
+    let hi=targetDate.getDate;
+    document.getElementById(days[i]).textContent=`${hi}(${labels[i]})`
+  }
 }
-if(youbi==3){
-  youbidevice="水曜日";
-  let karidate=new Date();
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()+1);
-  hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+2);
-  hi=karidate.getDate()
-  document.getElementById('friday').textContent=`${hi}(金)`;
-  karidate.setDate(Presentdate.getDate()-1);
-  hi=karidate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
-  karidate.setDate(Presentdate.getDate()-2);
-  hi=karidate.getDate()
-  document.getElementById('monday').textContent=`${hi}(月)`;
-  
+function nextweek(){
+  baseMonday.setDate(baseMonday.getDate()+7);
+  renderWeek();
 }
-if(youbi==4){
-  youbidevice="木曜日";
-  let karidate=new Date();
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+1);
-  hi=karidate.getDate()
-  document.getElementById('friday').textContent=`${hi}(金)`;
-  karidate.setDate(Presentdate.getDate()-1);
-  hi=karidate.getDate()
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()-2);
-  hi=karidate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()-3);
-  hi=karidate.getDate()
-  document.getElementById('monday').textContent=`${hi}(月)`;
+function prevweek(){
+  baseMonday.setDate(baseMonday.getDate()-7);
+  renderWeek();
 }
-if(youbi==5){
-  youbidevice="金曜日";
-  let karidate=new Date();
-  document.getElementById('friday').textContent=`${hi}(金)`;
-  karidate.setDate(Presentdate.getDate()-1);
-  hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()-2);
-  hi=karidate.getDate()
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()-3);
-  hi=karidate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
-  karidate.setDate(Presentdate.getDate()-4);
-  hi=karidate.getDate()
-  document.getElementById('monday').textContent=`${hi}(月)`;
-}
-if(youbi==6){
-  youbidevice="土曜日";
-  let karidate=new Date();
-  karidate.setDate(Presentdate.getDate()+2);
-  hi=karidate.getDate()
-  document.getElementById('monday').textContent=`${hi}(月)`;
-  karidate.setDate(Presentdate.getDate()+3);
-  hi=karidate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
-  karidate.setDate(Presentdate.getDate()+4);
-  hi=karidate.getDate()
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()+5);
-  hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+6);
-  hi=karidate.getDate()
-  document.getElementById('friday').textContent=`${hi}(金)`;
-}
-if(youbi==0){
-  youbidevice="日曜日";
-  let karidate=new Date();
-  karidate.setDate(Presentdate.getDate()+1);
-  hi=karidate.getDate()
-  document.getElementById('monday').textContent=`${hi}(月)`;
-  karidate.setDate(Presentdate.getDate()+2);
-  hi=karidate.getDate()
-  document.getElementById('tuesday').textContent=`${hi}(火)`;
-  karidate.setDate(Presentdate.getDate()+3);
-  hi=karidate.getDate()
-  document.getElementById('wednesday').textContent=`${hi}(水)`;
-  karidate.setDate(Presentdate.getDate()+4);
-  hi=karidate.getDate()
-  document.getElementById('thursday').textContent=`${hi}(木)`;
-  karidate.setDate(Presentdate.getDate()+5);
-  hi=karidate.getDate()
-  document.getElementById('friday').textContent=`${hi}(金)`;
-}
+document.getElementById('nextweekchange').addEventListener('click',nextweek);
+document.getElementById('prevweekchange').addEventListener('click',prevweek);
 let nowfileName = window.location.pathname.split('/').pop();
 console.log(nowfileName);
 let nowclass=nowfileName.slice(0,-5);
@@ -197,3 +101,4 @@ for(let i=1; i<6; i++){
 }
 
 init();
+initbaseMonday();
