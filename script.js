@@ -1,41 +1,72 @@
 'use strict';
-let baseMonday=new Date();
-function initbaseMonday() {
-  let today=new Date();
-  let day0fweek=today.getDay();
-  let diffDays=0;
-  if(day0fweek===0){
-    diffDays=1;
-  }else if(day0fweek===6){
-    diffDays=2;
-  }else{
-    diffDays=1-day0fweek;
+
+
+let baseMonday = new Date();
+
+
+function baseinit() {
+  let today = new Date();
+  let dayOfWeek = today.getDay(); 
+  
+  let diffDays = 0;
+  if (dayOfWeek === 0) {
+    
+    diffDays = 1;
+  } else if (dayOfWeek === 6) {
+    
+    diffDays = 2;
+  } else {
+   
+    diffDays = 1 - dayOfWeek;
   }
-  baseMonday.setDate(today.getDate()+diffDays);
+  
+  
+  baseMonday.setDate(today.getDate() + diffDays);
+  
+  
   renderWeek();
 }
-function renderWeek(){
-  let month=baseMonday.getMonth()+1;
-  document.getElementById("month-display").textContent=`${month}月`;
-  const days=['monday','tuesday','wednesday','thursday','friday'];
-  const labels=['月','火','水','木','金'];
-  for(let i=0;i<5;i++){
-    let targetDate=new Date(baseMonday);
-    targetDate.setDate(baseMonday.getDate()+i);
-    let hi=targetDate.getDate;
-    document.getElementById(days[i]).textContent=`${hi}(${labels[i]})`
+
+
+function renderWeek() {
+ 
+  let month = baseMonday.getMonth() + 1;
+  document.getElementById('month-display').textContent = `${month}月`;
+
+  
+  const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+  const labels = ['月', '火', '水', '木', '金'];
+
+
+  for (let i = 0; i < 5; i++) {
+    
+    let targetDate = new Date(baseMonday);
+    targetDate.setDate(baseMonday.getDate() + i);
+    
+    let hi = targetDate.getDate();
+    
+    document.getElementById(days[i]).textContent = `${hi}(${labels[i]})`;
   }
 }
-function nextweek(){
-  baseMonday.setDate(baseMonday.getDate()+7);
+
+
+function nextWeek() {
+  baseMonday.setDate(baseMonday.getDate() + 7); 
   renderWeek();
 }
-function prevweek(){
-  baseMonday.setDate(baseMonday.getDate()-7);
+
+
+function prevWeek() {
+  baseMonday.setDate(baseMonday.getDate() - 7);
   renderWeek();
 }
-document.getElementById('nextweekchange').addEventListener('click',nextweek);
-document.getElementById('prevweekchange').addEventListener('click',prevweek);
+
+
+document.getElementById('nextweekchange').addEventListener('click', nextWeek);
+document.getElementById('prevweekchange').addEventListener('click', prevWeek);
+
+
+baseinit();
 let nowfileName = window.location.pathname.split('/').pop();
 console.log(nowfileName);
 let nowclass=nowfileName.slice(0,-5);
@@ -101,4 +132,3 @@ for(let i=1; i<6; i++){
 }
 
 init();
-initbaseMonday();
