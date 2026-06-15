@@ -19,6 +19,7 @@ right:0;
   font-family:sans-serif;
   transition:.3s;
   border:none;
+  margin-top: 10px;
 }
 .weekchange:hover{
   color:#97cdf3;
