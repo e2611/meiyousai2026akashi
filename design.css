@@ -2,6 +2,28 @@
 body{
   background-color:#e6f0f0;
 }
+.button-pare{
+position:relative;
+}
+.prev{
+position:absolute;
+}
+.next{
+position:absolute;
+right:0;
+}
+.weekchange{
+  background-color:#97cdf3;
+  color:#ffffff;
+  font-size:15px;
+  font-family:sans-serif;
+  transition:.3s;
+  border:none;
+}
+.weekchange:hover{
+  color:#97cdf3;
+  background-color:#ffffff;
+}
 .backtohome{
   font-size:25px;
   color:#ffffff;
