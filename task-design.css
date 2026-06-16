@@ -1,39 +1,57 @@
-*{
+@charset "UTF-8";
+.backtohome{
+  font-size:25px;
+  color:#ffffff;
+  font-family:sans-serif;
+  float:right;
+  background-color:#97cdf3;
+  text-decoration:none;
+  transition:.3s;
+}
+.backtohome:hover{
+  color:#97cdf3;
+  background-color:#ffffff;
+}
+
+li {
+  list-style: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
-
 .btn {
-  color: #FFF;
+  font:white;
   font-weight: bold;
   border: none;
   border-radius: 3px;
   width: 50px;
   height: 50px;
-  cursor: pointer;
   margin-left: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f1f1f1;
+  background: #e6f0f0;
 }
 
 .wrapper {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding: 100px 20px 0;
-  max-width: 1000px;
+  max-width:1000px;
 }
 
-h1 {
-  color: #333;
-  margin-bottom: 60px;
+.backdesign{
+  color:white;
+  font-size:20px;
+  font-family:sans-serif;
+  display:inline-block;
+  padding:1rem 3rem 1rem 3rem;
+  background:#2291f2;
+  border-radius:3px;
 }
 
 .input-area {
@@ -87,8 +105,14 @@ label {
 }
 
 .add-btn {
-  background: #3ca83c;
+  background: #97cdf3;
+  font:white;
   margin-top: 20px;
+  transition:.3s;
+}
+.add-btn:hover{
+    background:white;
+    font:#97cdf3;
 }
 
 .display-task {
