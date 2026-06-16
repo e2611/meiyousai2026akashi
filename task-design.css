@@ -21,7 +21,7 @@ li {
 }
 
 .btn {
-  font:#ffffff;
+  color:#ffffff;
   font-weight: bold;
   border: none;
   border-radius: 3px;
@@ -106,13 +106,13 @@ label {
 
 .add-btn {
   background: #97cdf3;
-  font:white;
+  color:white;
   margin-top: 20px;
   transition:.3s;
 }
 .add-btn:hover{
     background:white;
-    font:#97cdf3;
+    color:#97cdf3;
 }
 
 .display-task {
