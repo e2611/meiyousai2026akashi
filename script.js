@@ -127,30 +127,25 @@ async function init() {
           cell.textContent = subject;
         }
         
-          try {
+          try{
             const newdata = await fetchJson('subject.json');
-            console.log(newdata);
-
-            let classdata = null;
-            if (Array.isArray(newdata)) {
-              classdata = newdata.find(item => item.class === subject);
-            } else if (newdata && typeof newdata === 'object') {
-              classdata = newdata[subject];
-            }
-
-            if (!classdata) {
-              console.warn(`subject.json に ${subject} のデータがありません`);
-              continue;
-            }
-
-            const luggagedata = classdata.luggage;
-            const sell = document.getElementById(`${youbi}-${gen}-bring`);
-            if (sell) {
+      console.log(newdata); // 取得したデータを利用
+      let classdata = newdata.find(item => item.subject === subject);
+      if (!classdata) {
+        throw new Error(`subject.json に ${subject} のデータが見つかりません`);
+        }
+            console.log(subject)
+            console.log(classdata);
+            let luggagedata = classdata.lug;
+            console.log(luggagedata);
+            let sell = document.getElementById(`${youbi}-${gen}-bring`);
+            console.log(sell);
+            if(sell){
               sell.textContent = luggagedata;
             }
 
-          } catch (error) {
-            console.error(error);
+          } catch(error){
+            console.error(error)
           }
        
       }
