@@ -54,6 +54,15 @@ right:0;
 .Adepbackcolor{
   background:#B7D100;
 }
+.Cdepbackcolor{
+  background:#7FCBE3;
+}
+.Edepbackcolor{
+  background:#FFc426;
+}
+.Mdepbackcolor{
+  background:#F13E20;
+}
 .timetable-design{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
@@ -93,7 +102,7 @@ right:0;
   width: 200px; /* 横幅 */
   position: absolute;
   left: 50%;
-  height: 80px;
+  height: 90px;
   top: 90%; /* Y軸の位置 */
   transform: translateX(-50%);
   margin-top: 10px; /* テキストとの距離 */
