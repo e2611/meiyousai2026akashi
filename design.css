@@ -54,6 +54,15 @@ right:0;
 .Adepbackcolor{
   background:#B7D100;
 }
+.Cdepbackcolor{
+  background:#7FCBE3;
+}
+.Edepbackcolor{
+  background:#FFc426;
+}
+.Mdepbackcolor{
+  background:#F13E20;
+}
 .timetable-design{
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
