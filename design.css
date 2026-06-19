@@ -67,7 +67,7 @@ right:0;
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows:0.4fr 1fr 1fr 1fr 1fr;
-  height:420px;
+  height:450px;
   background-color:white;
   border-width:1px;
   border-style:solid;
