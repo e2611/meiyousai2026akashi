@@ -115,7 +115,7 @@ right:0;
   visibility: hidden; /* ツールチップを非表示に */
   opacity: 0; /* 不透明度を0％に */
   z-index: 1;
-  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+  transition: 0.2s all; /* マウスオーバー時のアニメーション速度 */
 }
  
 .tooltip:hover .description_top { /* マウスオーバー時のスタイル */
