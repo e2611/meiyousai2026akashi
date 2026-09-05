@@ -1,1 +1,0 @@
-# meiyousai2026akashi
